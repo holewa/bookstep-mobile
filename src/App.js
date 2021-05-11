@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Sidemenu from './components/Sidemenu';
 import Home from './Home';
 import Slideshow from './components/Slideshow';
+import Popup from './components/Popup';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,9 +35,11 @@ const App = () => {
         </div>
         <div className="hider"></div>
         <div className="content">
-          <Sidemenu trigger={isOpen} />
+          <Popup trigger={isOpen}>
+            <Sidemenu />
+          </Popup>
           <Slideshow />
-          <div class="heading">
+          <div className="heading">
             <h4>
               Lås upp ljudböcker med motion och håll tränings- motivationen
               igång
