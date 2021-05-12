@@ -6,35 +6,16 @@ import Home from './Home';
 import Slideshow from './components/Slideshow';
 import Popup from './components/Popup';
 import Player from './components/Player';
+import Header from './components/Header';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const handleClick = () => {
-    isOpen ? setIsOpen(false) : setIsOpen(true);
-  };
 
   return (
     <Router>
       <Route path="/Player" component={Player} />
       <div className="container-fluid">
-        <div className="header">
-          <Link to="/">
-            <div className="hamburger">
-              {isOpen ? (
-                <i className="ri-close-line ri-3x" onClick={handleClick} />
-              ) : (
-                <i className="ri-menu-fill ri-3x" onClick={handleClick} />
-              )}
-            </div>
-          </Link>
-          <img src="Group29.svg" />
-          <div>
-            <Link to="/">
-              <i className="ri-notification-4-fill ri-2x" />
-            </Link>
-          </div>
-        </div>
+        <Header isOpen={isOpen} />
         <div className="hider"></div>
         <div className="content">
           <Popup trigger={isOpen}>
