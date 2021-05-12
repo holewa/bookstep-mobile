@@ -1,10 +1,11 @@
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import styles from './styles.css';
 import React, { useState } from 'react';
 import Sidemenu from './components/Sidemenu';
 import Home from './Home';
 import Slideshow from './components/Slideshow';
 import Popup from './components/Popup';
+import Player from './components/Player';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +16,7 @@ const App = () => {
 
   return (
     <Router>
+      <Route path="/Player" component={Player} />
       <div className="container-fluid">
         <div className="header">
           <Link to="/">
@@ -47,7 +49,7 @@ const App = () => {
           </div>
         </div>
         <div className="footer">
-          <Link to="/">
+          <Link to="/Player">
             <div>
               <i className="ri-bug-2-fill ri-3x"></i>
             </div>

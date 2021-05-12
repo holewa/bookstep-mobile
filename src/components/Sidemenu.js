@@ -6,12 +6,20 @@ export default function Sidemenu({ setTrigger }) {
     setTrigger(false);
   };
 
+  // const wrapInLinkAndI = (className, children, to) => {
+  //   return (
+  //     <Link to={to}>
+  //       <i className={className}>{children}</i>
+  //     </Link>
+  //   );
+  // };
+
   return (
     <div className="sidemenu">
       <Link>
         <i
           className="ri-close-line ri-3x"
-          style={{ marginLeft: '.5em' }}
+          style={{ marginLeft: '.55em' }}
           onClick={handleClose}
         ></i>
       </Link>
