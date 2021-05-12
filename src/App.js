@@ -36,7 +36,7 @@ const App = () => {
         <div className="hider"></div>
         <div className="content">
           <Popup trigger={isOpen}>
-            <Sidemenu />
+            <Sidemenu setTrigger={setIsOpen} />
           </Popup>
           <Slideshow />
           <div className="heading">
