@@ -15,7 +15,7 @@ const App = () => {
     <Router>
       <Route path="/Player" component={Player} />
       <div className="container-fluid">
-        <Header isOpen={isOpen} />
+        <Header isOpen={isOpen} setTrigger={setIsOpen} />
         <div className="hider"></div>
         <div className="content">
           <Popup trigger={isOpen}>

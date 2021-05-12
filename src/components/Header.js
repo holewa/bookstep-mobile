@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 
-export default function Header() {
+export default function Header({ isOpen, setTrigger }) {
   const handleClick = () => {
-    isOpen ? setIsOpen(false) : setIsOpen(true);
+    isOpen ? setTrigger(false) : setTrigger(true);
   };
-  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="header">
       <Link to="/">
