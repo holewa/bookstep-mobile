@@ -26,9 +26,9 @@ const App = () => {
               )}
             </div>
           </Link>
-          <h2 style={{ marginRight: '.5em' }}>Bookstep</h2>
+          <img src="Group29.svg" />
           <div>
-            <Link>
+            <Link to="/">
               <i className="ri-notification-4-fill ri-2x" />
             </Link>
           </div>
@@ -46,7 +46,6 @@ const App = () => {
             </h4>
           </div>
         </div>
-
         <div className="footer">
           <Link to="/">
             <div>
