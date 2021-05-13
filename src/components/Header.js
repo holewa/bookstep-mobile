@@ -26,11 +26,7 @@ export default function Header({ isOpen, setTrigger }) {
     <Header className="header">
       <Link to="/">
         <div className="hamburger">
-          {isOpen ? (
-            <i className="ri-close-line ri-3x" onClick={handleClick} />
-          ) : (
-            <i className="ri-menu-fill ri-3x" onClick={handleClick} />
-          )}
+          <i className="ri-menu-fill ri-3x" onClick={handleClick} />
         </div>
       </Link>
       <Link to="/">

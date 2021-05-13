@@ -3,12 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export default function Footer() {
-  const [isActive, setIsActive] = useState(true);
-  const [index, setIndex] = useState(0);
-
-  const handleActive = () => {
-    isActive ? setIsActive(false) : setIsActive(true);
-  };
+  const [index, setIndex] = useState(1);
 
   const Footer = styled.footer`
     position: fixed;
@@ -60,36 +55,6 @@ export default function Footer() {
             </div>
           </Link>
         ))}
-        {/* <i
-          className={`ri-headphone-fill ri-3x${
-            isActive ? ' active' : ' inActive'
-          }`}
-          style={{ opacity: 1 }}
-          onClick={handleActive}
-        ></i>
-
-        <Link to="/">
-          <div>
-            <i
-              className={`ri-file-mark-fill ri-3x${
-                isActive ? ' active' : ' inActive'
-              }`}
-              style={{ opacity: 1 }}
-              onClick={handleActive}
-            ></i>
-          </div>
-        </Link>
-        <Link to="/">
-          <div>
-            <i
-              className={`ri-run-fill ri-3x${
-                isActive ? ' active' : ' inActive'
-              }`}
-              onClick={handleActive}
-              style={{ opacity: 1 }}
-            ></i>
-          </div>
-        </Link> */}
       </div>
     </Footer>
   );
