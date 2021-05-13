@@ -7,6 +7,8 @@ import Popup from './components/Popup';
 import Player from './components/Player';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Profile from './components/Profile';
+import Books from './components/Books';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,6 +20,8 @@ const App = () => {
         <section className="hider"></section>
         <main className="content">
           <Route path="/Player" component={Player} />
+          <Route path="/Profile" exact component={Profile} />
+          <Route path="/Books" exact component={Books} />
           <Route path="/" exact component={Home} />
           <Popup trigger={isOpen}>
             <Sidemenu setTrigger={setIsOpen} />
