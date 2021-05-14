@@ -9,26 +9,25 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Profile from './components/Profile';
 import Books from './components/Books';
+import { AuthProvider } from './contexts/AuthContext';
+import MainContent from './components/MainContent';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Router>
-      <div className="container-fluid">
-        <Header isOpen={isOpen} setTrigger={setIsOpen} />
-        <section className="hider"></section>
-        <main className="content">
-          <Route path="/Player" component={Player} />
-          <Route path="/Profile" exact component={Profile} />
-          <Route path="/Books" exact component={Books} />
-          <Route path="/" exact component={Home} />
+      <AuthProvider>
+        <div className="container-fluid">
+          <Header isOpen={isOpen} setTrigger={setIsOpen} />
+          <section className="hider"></section>
+          <MainContent />
           <Popup trigger={isOpen}>
             <Sidemenu setTrigger={setIsOpen} />
           </Popup>
-        </main>
-        <Footer />
-      </div>
+          <Footer />
+        </div>
+      </AuthProvider>
     </Router>
   );
 };
